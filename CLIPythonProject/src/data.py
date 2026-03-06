@@ -13,11 +13,11 @@ class Problem:
         return f"""
 
 ---
-network: {self.title}
-freeze: {self.freeze}
-heating: {self.heating}
-bluescreen: {self.bluescreen}
-osslow: {self.osslow}
+Network: {self.network}
+Freeze: {self.freeze}
+Overheating: {self.heating}
+Bluescreen: {self.bluescreen}
+Os Slow: {self.osslow}
 
 ---
 """
