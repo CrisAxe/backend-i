@@ -10,15 +10,36 @@ def create_problem(network, freeze, heating, bluescreen, osslow):
         bluescreen=bluescreen,
         osslow=osslow
     )
-def get_solution(problem: str) -> str:
-    """Return a solution based on a problem keyword."""
+def get_solution(problem: str):
+    """Return troubleshooting steps based on a problem keyword."""
 
     solutions = {
-        "network": "Check your router, restart it, and verify your network drivers.",
-        "freeze": "Close heavy applications and check your RAM usage.",
-        "heating": "Clean your computer fan and ensure proper ventilation.",
-        "bluescreen": "Update drivers and run a system diagnostic.",
-        "osslow": "Disable startup programs and clean temporary files."
+        "network": [
+            "Check if the router is powered on",
+            "Restart the router",
+            "Check ethernet/Wi-Fi connection",
+            "Update network drivers"
+        ],
+        "freeze": [
+            "Close heavy applications",
+            "Check RAM usage in Task Manager",
+            "Restart the computer"
+        ],
+        "heating": [
+            "Clean the computer fans",
+            "Ensure proper ventilation",
+            "Check CPU usage"
+        ],
+        "bluescreen": [
+            "Update system drivers",
+            "Run Windows memory diagnostic",
+            "Check for hardware issues"
+        ],
+        "osslow": [
+            "Disable startup programs",
+            "Delete temporary files",
+            "Scan for malware"
+        ]
     }
 
-    return solutions.get(problem.lower(), "Problem not recognized. Try: network, freeze, heating, bluescreen, osslow.")
+    return solutions.get(problem.lower(), ["Problem not recognized."])
