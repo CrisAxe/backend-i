@@ -3,8 +3,7 @@ from app.api.schemas import ActionItemCreate, ActionItemRead
 
 router = APIRouter(prefix="/meetings", tags=["action-items"])
 
-# In-memory DB for action items
-# Key: meeting_id → List[action_item]
+
 ACTION_DB: dict[str, list[dict]] = {}
 
 

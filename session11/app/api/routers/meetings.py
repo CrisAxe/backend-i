@@ -3,7 +3,6 @@ from app.api.schemas import MeetingCreate, MeetingRead
 
 router = APIRouter(prefix="/meetings", tags=["meetings"])
 
-# In-memory DB for meetings
 DB: dict[str, dict] = {}
 
 

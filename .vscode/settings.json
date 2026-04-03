@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./session5"
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

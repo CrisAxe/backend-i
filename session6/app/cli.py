@@ -9,7 +9,7 @@ app = typer.Typer()
 
 @app.callback()
 def main() -> None:
-    # Configure logging once at CLI startup
+   
     configure_logging()
 
 
